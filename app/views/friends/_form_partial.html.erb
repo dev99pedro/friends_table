@@ -1,0 +1,32 @@
+
+
+<div class="container-new-friend">
+<h2> Editing Friend</h2> 
+<%= form_with model: friend do |form| %>
+  <div>
+    <%= form.text_field :firstname, placeholder: "Firstname", class: "input" %>
+  </div>
+  <div>
+    <%= form.text_field :secondname, placeholder: "Secondname", class: "input" %>
+  </div>
+  <div>
+    <%= form.text_field :email, placeholder: "Email", class: "input" %>
+  </div>
+  <div>
+    <%= form.text_field :phone, placeholder: "Phone", class: "input" %>
+  </div>
+  <div>
+    <%= form.text_field :twitter, placeholder: "Twitter" , class: "input" %>
+  </div>
+  <div class="btns">
+    <div>
+    <%= form.submit  class: "btn-editing-friend" %>
+    </div>
+    <div>
+        <%= link_to "Back", root_path, class: "btn-new-back"%>
+    </div>
+  </div>
+ 
+<% end %>
+
+</div>

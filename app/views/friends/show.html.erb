@@ -1,0 +1,9 @@
+<div class="container-show">
+    <div class="friend-card-show">
+        <h1><%= @friend.firstname %></h1>
+        <p><%= @friend.email %> • <%= @friend.phone %> • <%= @friend.twitter %><p> 
+    </div>
+    <div>
+        <%= link_to "Back", root_path, class: "btn-new-back"%>
+    </div>
+</div>

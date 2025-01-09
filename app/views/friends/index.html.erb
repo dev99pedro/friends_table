@@ -1,0 +1,33 @@
+    <div class="container">
+        <div class="friends-card">
+            <h3 class="friends-card-box-title"> First name </h3>
+            <h3 class="friends-card-box-title"> Last name </h3>
+            <h3 class="friends-card-box-title"> Email </h3>
+            <h3 class="friends-card-box-title" > Phone </h3>
+            <h3 class="friends-card-box-title"> Twitter </h3>
+            <div class="friends-card-box-filledout"> </div>
+
+        </div>   
+    </div>
+
+    
+
+    <%@friend.each  do | friends | %>
+    <div class="container">
+        <div class="friends-card">
+            <p class="friends-card-box"> <%= friends.firstname%> </p>
+            <p class="friends-card-box"> <%= friends.secondname%> </p>
+            <p class="friends-card-box"> <%= friends.email%> </p>
+            <p class="friends-card-box"> <%= friends.phone%> </p>
+            <p class="friends-card-box"> <%= friends.twitter%> </p>
+            <%=  link_to 'Show', friend_path(friends),  class: 'friends-card-box link'  %>
+            <%=  button_to 'Destroy', friends,  method: :delete, class: 'friends-card-box-destroy link' %>
+            <%=  link_to 'Edit', edit_friend_path(friends), class: 'friends-card-box link'%>
+        </div>   
+    </div>   
+    <% end %>
+
+    <br>
+    <div class="container-btn">
+    <%= link_to 'New Friend', new_friend_path, class: "btn-new-friend"%>
+    </div>
